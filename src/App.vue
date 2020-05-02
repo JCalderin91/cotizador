@@ -19,5 +19,29 @@
   margin: 0 auto;
 }
 
+.form-group{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  label{
+    display: block;
+    width: 100%;
+    margin-bottom: 3px;
+    text-align: left !important;
+  }
+  .form-control{
+    width: 100%;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+.btn{
+  margin: 0 10px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 
 </style>

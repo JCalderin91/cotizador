@@ -2,8 +2,8 @@
   <div class="calcular">
     <div class="top-bar">
       <span class="backBtn" v-if="section>0" @click="back()">Anterior</span>
-      <span>{{section+1}}/{{sections.length}}</span>
-      <span v-if="section!=0">{{historical[section-1]}} $</span>
+      <span class="step">{{section+1}}/{{sections.length}}</span>
+      <span v-if="section!=0">{{historical[section-1].toFixed(2)}} $</span>
     </div>
     <div class="body">
       <h1 class="question">{{sections[section].title}}</h1>
@@ -58,6 +58,9 @@ export default {
     align-items: flex-end;
     height: 60px;
     font-weight: bold;
+    .step{
+      font-size: 1.2rem;
+    }
     .backBtn{
       cursor: pointer;
     }
