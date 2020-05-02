@@ -29,7 +29,6 @@ export default {
   methods: {
     choice(option){
       if(this.sections.length > this.section+1){
-        console.log(this.section, this.sections.length)
         if(this.section == 0){
           this.cost = option.value
         }else{
@@ -37,12 +36,10 @@ export default {
         }
         this.section++
         this.historical.push(this.cost)
-        console.log('Step', this.section+1);
       }else{
         this.cost *= option.value
         this.historical.push(this.cost)
         this.$router.push({name:'Resultado', params: {cost: this.historical[this.section]}})
-        console.log('finalizar')
       }
     },
     back(){
