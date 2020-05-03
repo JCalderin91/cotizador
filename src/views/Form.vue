@@ -1,65 +1,121 @@
 <template>
   <div class="home">
-    <p>¡Bien! ¡Hemos terminado!</p>
-    <h1>El coste estimado de tu web es</h1>
-    <h1 class="cost">{{cost}} $</h1>
-    <div>
-      <router-link class="recalcular" :to="{name:'Calcular'}">Volver a calcular</router-link>
-    </div>
-    <h3>Cuéntanos que necesitas para que podamos entender tu proyecto</h3>
-
-    <h3 class="message">
-      <span v-for="(item, index) in history" :key="index">{{item.msg}}</span> <span class="cursor">|</span>
-    </h3>
-    <div v-if="history.length<2" class="formulario">
-      <h3>{{options[step].title}}</h3>
-      <button class="btn boton" @click="choice(option)" v-for="(option, index) in options[step].options" :key="index">{{option.text}}</button>
-    </div>
-
-    <div v-else class="formulario">
-      <h4>Incluye ahora cualquier información adicional que tengas</h4>
-      <div class="form-group">
-        <label for="">Nombre del proyecto</label>
-        <input class="form-control" type="text">
-      </div>
-      <div class="form-group">
-        <label for="">Funcionalidades y especificaciones técnicas</label>
-        <textarea class="form-control" name="" id="" cols="3"></textarea>
-      </div>
-      <div class="actions">
-        <button class="btn continuar">Continuar</button>
+    <div class="card">
+      <div class="card-body">
+        <p class="text-center h4">¡Bien! ¡Hemos terminado!</p>
+        <div class="cost-content d-flex align-items-center justify-content-center">
+          <h1 class="text-center">El coste estimado es</h1>
+          <h1 class="cost pl-3 m-0 text-center">{{cost}} $</h1>
+        </div>
+        <div class=" text-center">
+          <a class="recalcular mb-3" @click="recalcular">Volver a calcular</a>
+        </div>
       </div>
     </div>
 
-    <a href="#" class="back" v-if="history.length>0" @click="back()">Volver</a>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h3 class="text-center">Cuéntanos más de ti y tu proyecto</h3>
+
+        <div class="row mx-lg-5">
+          <div class="form-group col-md-4">
+            <label for="">Nombres y Apellidos *</label>
+            <input v-model="user.name" class="form-control" :class="{'is-invalid':errors.name}" type="text">
+            <div v-if="errors.name" class="invalid-feedback">{{errors.name}}</div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="">Email *</label>
+            <input v-model="user.email" class="form-control" :class="{'is-invalid':errors.email}" type="text">
+            <div v-if="errors.email" class="invalid-feedback">{{errors.email}}</div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="">Telefono *</label>
+            <input v-model="user.phone" class="form-control" :class="{'is-invalid':errors.phone}" type="text">
+            <div v-if="errors.phone" class="invalid-feedback">{{errors.phone}}</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="">Nombre empresa</label>
+            <input v-model="user.company" class="form-control" type="text">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="">Nombre del proyecto</label>
+            <input v-model="project.name" class="form-control" type="text">
+          </div>
+          <div class="form-group col-md-12">
+            <label for="">Funcionalidades y especificaciones técnicas</label>
+            <textarea v-model="project.data" class="form-control" name="" id="" cols="3"></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button @click="sendData()" class="btn btn-info btn-lg">Finalizar</button>
+          </div>
+          <div class="col-12">
+            <small>(*) Campos requeridos</small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import options from "@/assets/options"
 export default {
   name: 'Home',
   data: () => ({
+    errors: {},
     cost: 0,
-    step: 0,
-    history: [],
-    options
+    project: {},
+    user: {},
   }),
-  beforeMount(){
-    if(this.$route.params.cost){
+  beforeMount() {
+    if (this.$route.params.cost) {
       this.cost = this.$route.params.cost.toFixed(2)
-    }else{
-      this.$router.push({name:'Home'})
+    } else {
+      this.$router.go(-1)
     }
   },
   methods: {
-    choice(option){
-      this.history.push(option)
-      this.step++     
+    recalcular() {
+      this.$router.go(-1)
     },
-    back(){
-      this.history.pop()
-      if(this.step>0) this.step--
+    checkData() {
+      this.errors = {}
+      if (!this.user.name) {
+        this.errors.name = "El nombre es obligatorio.";
+      }
+      if (!this.user.phone) {
+        this.errors.phone = "El telefono es obligatorio.";
+      }
+      if (!this.user.email) {
+        this.errors.email = "El Email es obbligatorio.";
+      } else {
+        if (!this.validEmail(this.user.email)) {
+          this.errors.email = "El formato de email no es correcto.";
+        }
+      }
+    },
+    validEmail: function(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+    sendData() {
+      this.checkData()
+      if (!this.errors.length) {
+        const data = {
+          ...this.user,
+          ...this.project
+        }
+        fetch('https://jcalderin91.github.io/cotizador.php', {
+          method: 'POST', // or 'PUT'
+          body: JSON.stringify(data), // data can be `string` or {object}!
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then(() => {
+          //console.log('Exito')
+        }).catch(() => {
+          //console.log('Algo salio mal')
+        })
+      }
     }
   }
 }
@@ -72,44 +128,11 @@ export default {
       font-weight: bold;
       color: #00cccc;
     }
-    .message{
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .back{
-      margin-top: 20px;
-      text-decoration: none;
-      color: black;
-    }
-    .boton{
-      background-color: #00cccc;
-      transition: all .3s ease-in-out;
-      &:hover{
-        transform: translateY(-4px);
-      }
-    }
-    .cursor{
-      animation-name: pulse;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      animation-duration: 1s;
-
-    }
-    .formulario{
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .actions{
-      .continuar{
-        background-color: forestgreen;
-        color: white;
-      }
-    }
     .recalcular{
       text-decoration: none;
-      color: black;
+      color: #555;
       display: inline-block;
+      cursor: pointer;
       &:hover{
         color: #00cccc;
       }

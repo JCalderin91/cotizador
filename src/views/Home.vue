@@ -1,12 +1,13 @@
 <template>
-  <div class="home">
-    <div class="imegen">
-      <img alt="Vue logo" src="../assets/logo.png">
+  <div class="home text-center">
+    <div class="image-contenedor">
+      <img class="image" alt="logo" width="400" src="../assets/logo-black.png">
     </div>
     <h1 class="title">¿Cuánto cuesta crear tu página o sitio web?</h1>
     <p class="subTitle">Calcula el coste para crear tu página web de manera sencilla. Obtén un presupuesto aproximado para la creación de tu sitio web.</p>
     <div class="action">
-      <router-link tag="button" class="button" to="/calcular">Calcular coste</router-link>
+      <router-link tag="button" class="button" to="/sitio-web">Sitio web</router-link>
+      <router-link tag="button" class="button" to="/diseño">Diseño gráfico</router-link>
     </div>
     
   </div>
@@ -21,6 +22,13 @@ export default {
 
 <style lang="scss" scope>
   .home{
+    .image-contenedor{
+      width: 100%;
+      .image{
+        width: 400px;
+        max-width: 85%;
+      }
+    }
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,6 +51,7 @@ export default {
         font-weight: bold;
         font-size: 1.5rem;
         transition: all .5s ease-in-out;
+        margin: 0 3px;
         cursor: pointer;
         background: linear-gradient(#00cccc, #00aaaa);
         &:hover{

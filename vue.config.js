@@ -1,3 +1,5 @@
 module.exports = {
-  publicPath: '/cotizador/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/cotizador/'
+    : '/'
 }

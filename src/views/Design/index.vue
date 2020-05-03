@@ -6,9 +6,9 @@
       <span v-if="section!=0">{{historical[section-1].toFixed(2)}} $</span>
     </div>
     <div class="body">
-      <h1 class="question">{{sections[section].title}}</h1>
-      <div class="options">
-        <Option @choice="choice($event)" :option="option" v-for="(option, index) in sections[section].options" :key="index" />
+      <h1 class="question text-center">{{sections[section].title}}</h1>
+      <div class="options row">
+        <Option class="col-md-3" @choice="choice($event)" :option="option" v-for="(option, index) in sections[section].options" :key="index" />
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
 <script>
 import Option from '@/components/Option';
-import sections from '@/assets/sections'
+import sections from './sections'
 export default {
   components: {Option},
   data: () => ({
@@ -66,7 +66,7 @@ export default {
     }
   }
   .body{
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,6 +77,7 @@ export default {
     .options{
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
   }
 }

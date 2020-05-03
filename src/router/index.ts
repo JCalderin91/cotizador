@@ -11,12 +11,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/calcular',
-    name: 'Calcular',
+    path: '/sitio-web',
+    name: 'Website',
     // route level code-splitting
     // this generates a separate chunk (calcular.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "calcular" */ '../views/Calcular.vue')
+    component: () => import(/* webpackChunkName: "calcular" */ '../views/WebSite/index.vue')
+  },
+  {
+    path: '/diseño',
+    name: 'Design',
+    // route level code-splitting
+    // this generates a separate chunk (calcular.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "calcular" */ '../views/Design/index.vue')
   },
   {
     path: '/resultado',

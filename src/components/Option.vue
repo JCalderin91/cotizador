@@ -1,6 +1,6 @@
 <template>
   <div class="option" @click="choice(option)">
-    <img alt="Vue logo" class="imagen" :src="option.src">
+    <img alt="Vue logo" class="imagen" :src="getImgUrl(option.src)">
     <br>
     <span class="text">{{option.text}}</span>
   </div>
@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: 'option',
   props: {
     option: {
       type: Object,
@@ -17,6 +18,9 @@ export default {
   methods: {
     choice(option){
       this.$emit('choice', option)
+    },
+    getImgUrl(pic) {
+        return require('../assets/images/'+pic)
     }
   }
 }
@@ -29,18 +33,19 @@ export default {
   padding: 15px;
   transition:  all .2s ease-in-out;
   border: 1px solid transparent;
-  margin: 0 10px;
+  text-align: center;
   cursor: pointer;
   .imagen{
-    width: 200px;
+    width: 100%;
   }
   .text{
+    margin-top: 10px;
     font-weight: bold;
   }
   &:hover{
     transform: translateY(-15px);
-    border: 1px solid #999;
-    background-color: rgb(248, 248, 248);
+    border: 1px solid #00cccc69;
+    background-color: #00cccc21;
   }
 }
 </style>
