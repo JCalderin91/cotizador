@@ -19,19 +19,19 @@ export default [{
         value: 150
       },
       {
-        id: 3,
+        id: 4,
         src: 'linkedin.png',
         text: 'Linkedin',
         value: 50
       },
       {
-        id: 3,
+        id: 5,
         src: 'tiktok.png',
         text: 'TikTok',
         value: 50
       },
       {
-        id: 4,
+        id: 6,
         src: 'youtube.png',
         text: 'YouTube',
         value: 250

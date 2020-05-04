@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d4160e2908346c80fb0",
+    "revision": "f511edc0220133139fc1",
     "url": "/cotizador/css/app.d4896dd3.css"
   },
   {
@@ -8,20 +8,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/css/bootstrap.min.css"
   },
   {
-    "revision": "2f48b3b396609875ed21",
-    "url": "/cotizador/css/calcular.ae034945.css"
+    "revision": "391049194b6807d5ff04",
+    "url": "/cotizador/css/calcular.6f1ce6bf.css"
+  },
+  {
+    "revision": "0e12dd29f690c5c00d77",
+    "url": "/cotizador/css/chunk-09320e47.6f1ce6bf.css"
+  },
+  {
+    "revision": "552c5431f1b299f209e5",
+    "url": "/cotizador/css/chunk-247c62d7.cba890cc.css"
   },
   {
     "revision": "0068916b2f467e423e27",
     "url": "/cotizador/css/chunk-26ed1d4b.587581ae.css"
   },
   {
-    "revision": "ae45a70277d54c998352",
-    "url": "/cotizador/css/chunk-3dcfe42c.ae034945.css"
-  },
-  {
-    "revision": "96af58d2c9a7a3c48bf8",
-    "url": "/cotizador/css/chunk-6b7024ae.ae034945.css"
+    "revision": "d93abc659188d237c44a",
+    "url": "/cotizador/css/chunk-f54a8c6c.6f1ce6bf.css"
   },
   {
     "revision": "05df168c15c1c916da67",
@@ -92,6 +96,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/si.40a4c265.png"
   },
   {
+    "revision": "b8a575f0d950f33250d5d7aa88a185a6",
+    "url": "/cotizador/img/tiktok.b8a575f0.png"
+  },
+  {
     "revision": "f325882768ac13f839d120a0199f7a00",
     "url": "/cotizador/img/web-a-medida.f3258827.jpeg"
   },
@@ -104,28 +112,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/web-profecional.80389af6.jpeg"
   },
   {
-    "revision": "fa1a0421e90fa4ee5a17cd3f8a5969f9",
+    "revision": "8dc4bac478a73b5f43f23cbd1c2e3fd3",
     "url": "/cotizador/index.html"
   },
   {
-    "revision": "1d4160e2908346c80fb0",
-    "url": "/cotizador/js/app.109923e1.js"
+    "revision": "f511edc0220133139fc1",
+    "url": "/cotizador/js/app.f79dfe59.js"
   },
   {
-    "revision": "2f48b3b396609875ed21",
-    "url": "/cotizador/js/calcular.fa0f2012.js"
+    "revision": "391049194b6807d5ff04",
+    "url": "/cotizador/js/calcular.69dbdfaf.js"
+  },
+  {
+    "revision": "0e12dd29f690c5c00d77",
+    "url": "/cotizador/js/chunk-09320e47.328c42ac.js"
+  },
+  {
+    "revision": "552c5431f1b299f209e5",
+    "url": "/cotizador/js/chunk-247c62d7.fcb089aa.js"
   },
   {
     "revision": "0068916b2f467e423e27",
     "url": "/cotizador/js/chunk-26ed1d4b.18aa58c5.js"
   },
   {
-    "revision": "ae45a70277d54c998352",
-    "url": "/cotizador/js/chunk-3dcfe42c.7dddb776.js"
-  },
-  {
-    "revision": "96af58d2c9a7a3c48bf8",
-    "url": "/cotizador/js/chunk-6b7024ae.55c0c3f5.js"
+    "revision": "d93abc659188d237c44a",
+    "url": "/cotizador/js/chunk-f54a8c6c.33478619.js"
   },
   {
     "revision": "05df168c15c1c916da67",
