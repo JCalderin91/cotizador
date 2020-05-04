@@ -2,31 +2,37 @@ export default [{
     title: '¿Qué Redes sociales necesitás que trabajemos? ',
     options: [{
         id: 0,
-        src: 'E-tienda.jpeg',
+        src: 'facebook.png',
         text: 'Facebook',
         value: 30
       },
       {
         id: 1,
-        src: 'web-profecional.jpeg',
+        src: 'twitter.png',
         text: 'Twitter',
         value: 100
       },
       {
         id: 2,
-        src: 'web-blog.jpeg',
+        src: 'instagram.png',
         text: 'Instagram',
         value: 150
       },
       {
         id: 3,
-        src: 'web-a-medida.jpeg',
+        src: 'linkedin.png',
         text: 'Linkedin',
         value: 50
       },
       {
+        id: 3,
+        src: 'tiktok.png',
+        text: 'TikTok',
+        value: 50
+      },
+      {
         id: 4,
-        src: 'web-a-medida.jpeg',
+        src: 'youtube.png',
         text: 'YouTube',
         value: 250
       },
