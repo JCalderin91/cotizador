@@ -1,5 +1,5 @@
 <template>
-  <div class="calcular">
+  <div class="calcular py-5 py-md-2">
     <div class="top-bar">
       <span class="backBtn" v-if="section>0" @click="back()">Anterior</span>
       <span class="step">{{section+1}}/{{sections.length}}</span>

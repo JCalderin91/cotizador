@@ -52,6 +52,7 @@ export default {
   cursor: pointer;
   .imagen{
     max-width: 100%;
+    height: 150px;
   }
   .text{
     margin-top: 10px;

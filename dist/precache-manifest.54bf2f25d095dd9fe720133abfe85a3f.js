@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da2966ab339e47b23c66",
-    "url": "/cotizador/css/app.1f6a1330.css"
+    "revision": "1d4160e2908346c80fb0",
+    "url": "/cotizador/css/app.d4896dd3.css"
   },
   {
-    "revision": "2ed032c43ad83cb5fb12",
-    "url": "/cotizador/css/calcular.54fbead1.css"
+    "revision": "c51ad29ab9d9a528f5517116b3330c13",
+    "url": "/cotizador/css/bootstrap.min.css"
   },
   {
-    "revision": "bb13d07e54087f997f87",
-    "url": "/cotizador/css/chunk-1ff5a53a.54fbead1.css"
+    "revision": "2f48b3b396609875ed21",
+    "url": "/cotizador/css/calcular.ae034945.css"
   },
   {
-    "revision": "93e9b1edb43bcfef53e6",
+    "revision": "0068916b2f467e423e27",
     "url": "/cotizador/css/chunk-26ed1d4b.587581ae.css"
   },
   {
-    "revision": "7c66746530f741345557",
-    "url": "/cotizador/css/chunk-4ffb2e81.54fbead1.css"
+    "revision": "ae45a70277d54c998352",
+    "url": "/cotizador/css/chunk-3dcfe42c.ae034945.css"
+  },
+  {
+    "revision": "96af58d2c9a7a3c48bf8",
+    "url": "/cotizador/css/chunk-6b7024ae.ae034945.css"
   },
   {
     "revision": "05df168c15c1c916da67",
@@ -68,6 +72,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/WhatsApp Image 2020-05-02 at 4.37.38 PM.3673b61b.jpeg"
   },
   {
+    "revision": "6dcbd47b0e95b832a120b44cfad3e0ec",
+    "url": "/cotizador/img/background.6dcbd47b.png"
+  },
+  {
     "revision": "018942ab382611c9178436a82388e915",
     "url": "/cotizador/img/logo-black.018942ab.png"
   },
@@ -76,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/no-diseño.9e61af36.jpeg"
   },
   {
-    "revision": "defd26a2b956edcace2e491ef8afd735",
-    "url": "/cotizador/img/no.defd26a2.png"
+    "revision": "9ae78cd28eed390de8d9a71c13098b5b",
+    "url": "/cotizador/img/no.9ae78cd2.png"
   },
   {
-    "revision": "da2b7e669fcf517449ec1de51b8dbb09",
-    "url": "/cotizador/img/si.da2b7e66.png"
+    "revision": "40a4c265cec665923299c71e4d3101aa",
+    "url": "/cotizador/img/si.40a4c265.png"
   },
   {
     "revision": "f325882768ac13f839d120a0199f7a00",
@@ -96,28 +104,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/web-profecional.80389af6.jpeg"
   },
   {
-    "revision": "fad82d46ac469bc62c48c55d1a93a44a",
+    "revision": "fa1a0421e90fa4ee5a17cd3f8a5969f9",
     "url": "/cotizador/index.html"
   },
   {
-    "revision": "da2966ab339e47b23c66",
-    "url": "/cotizador/js/app.ef54099a.js"
+    "revision": "1d4160e2908346c80fb0",
+    "url": "/cotizador/js/app.109923e1.js"
   },
   {
-    "revision": "2ed032c43ad83cb5fb12",
-    "url": "/cotizador/js/calcular.e7988903.js"
+    "revision": "2f48b3b396609875ed21",
+    "url": "/cotizador/js/calcular.fa0f2012.js"
   },
   {
-    "revision": "bb13d07e54087f997f87",
-    "url": "/cotizador/js/chunk-1ff5a53a.66d486da.js"
+    "revision": "0068916b2f467e423e27",
+    "url": "/cotizador/js/chunk-26ed1d4b.18aa58c5.js"
   },
   {
-    "revision": "93e9b1edb43bcfef53e6",
-    "url": "/cotizador/js/chunk-26ed1d4b.6a40aa9d.js"
+    "revision": "ae45a70277d54c998352",
+    "url": "/cotizador/js/chunk-3dcfe42c.7dddb776.js"
   },
   {
-    "revision": "7c66746530f741345557",
-    "url": "/cotizador/js/chunk-4ffb2e81.20a77c28.js"
+    "revision": "96af58d2c9a7a3c48bf8",
+    "url": "/cotizador/js/chunk-6b7024ae.55c0c3f5.js"
   },
   {
     "revision": "05df168c15c1c916da67",

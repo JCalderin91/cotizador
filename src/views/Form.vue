@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <div class="card">
+    <div class="card mt-5 mt-md-2">
       <div class="card-body">
         <p class="text-center h4">¡Bien! ¡Hemos terminado!</p>
-        <div class="cost-content d-flex align-items-center justify-content-center">
+        <div class="cost-content d-flex align-items-center justify-content-center flex-wrap">
           <h1 class="text-center">El coste estimado es</h1>
           <h1 class="cost pl-3 m-0 text-center">{{cost}} $</h1>
         </div>
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="card mt-3">
+    <div class="card mt-3 mb-5 mb-md-2">
       <div class="card-body">
         <h3 class="text-center">Cuéntanos más de ti y tu proyecto</h3>
 
@@ -45,11 +45,11 @@
             <label for="">Funcionalidades y especificaciones técnicas</label>
             <textarea v-model="project.data" class="form-control" name="" id="" cols="3"></textarea>
           </div>
-          <div class="col-12 text-center">
-            <button @click="sendData()" class="btn btn-info btn-lg">Finalizar</button>
-          </div>
           <div class="col-12">
             <small>(*) Campos requeridos</small>
+          </div>
+          <div class="col-12 text-center">
+            <button @click="sendData()" class="btn btn-info btn-lg">Finalizar</button>
           </div>
         </div>
       </div>
