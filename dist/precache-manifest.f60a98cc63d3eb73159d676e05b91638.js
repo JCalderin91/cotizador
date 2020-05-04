@@ -1,15 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e2e9a4878bf9b63a36d",
+    "revision": "da2966ab339e47b23c66",
     "url": "/cotizador/css/app.1f6a1330.css"
   },
   {
-    "revision": "3b423e6e2cf6ad36cf51",
-    "url": "/cotizador/css/calcular.84aab358.css"
+    "revision": "2ed032c43ad83cb5fb12",
+    "url": "/cotizador/css/calcular.54fbead1.css"
+  },
+  {
+    "revision": "bb13d07e54087f997f87",
+    "url": "/cotizador/css/chunk-1ff5a53a.54fbead1.css"
   },
   {
     "revision": "93e9b1edb43bcfef53e6",
     "url": "/cotizador/css/chunk-26ed1d4b.587581ae.css"
+  },
+  {
+    "revision": "7c66746530f741345557",
+    "url": "/cotizador/css/chunk-4ffb2e81.54fbead1.css"
   },
   {
     "revision": "05df168c15c1c916da67",
@@ -68,6 +76,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/no-diseño.9e61af36.jpeg"
   },
   {
+    "revision": "defd26a2b956edcace2e491ef8afd735",
+    "url": "/cotizador/img/no.defd26a2.png"
+  },
+  {
+    "revision": "da2b7e669fcf517449ec1de51b8dbb09",
+    "url": "/cotizador/img/si.da2b7e66.png"
+  },
+  {
     "revision": "f325882768ac13f839d120a0199f7a00",
     "url": "/cotizador/img/web-a-medida.f3258827.jpeg"
   },
@@ -80,20 +96,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cotizador/img/web-profecional.80389af6.jpeg"
   },
   {
-    "revision": "ca4c3cb86bed2d8e665eb95d7f54d957",
+    "revision": "fad82d46ac469bc62c48c55d1a93a44a",
     "url": "/cotizador/index.html"
   },
   {
-    "revision": "9e2e9a4878bf9b63a36d",
-    "url": "/cotizador/js/app.44e96331.js"
+    "revision": "da2966ab339e47b23c66",
+    "url": "/cotizador/js/app.ef54099a.js"
   },
   {
-    "revision": "3b423e6e2cf6ad36cf51",
-    "url": "/cotizador/js/calcular.f5a95931.js"
+    "revision": "2ed032c43ad83cb5fb12",
+    "url": "/cotizador/js/calcular.e7988903.js"
+  },
+  {
+    "revision": "bb13d07e54087f997f87",
+    "url": "/cotizador/js/chunk-1ff5a53a.66d486da.js"
   },
   {
     "revision": "93e9b1edb43bcfef53e6",
     "url": "/cotizador/js/chunk-26ed1d4b.6a40aa9d.js"
+  },
+  {
+    "revision": "7c66746530f741345557",
+    "url": "/cotizador/js/chunk-4ffb2e81.20a77c28.js"
   },
   {
     "revision": "05df168c15c1c916da67",

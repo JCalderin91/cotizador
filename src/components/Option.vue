@@ -1,8 +1,15 @@
 <template>
-  <div class="option" @click="choice(option)">
-    <img alt="Vue logo" class="imagen" :src="getImgUrl(option.src)">
-    <br>
-    <span class="text">{{option.text}}</span>
+  <div class="p-2">
+    <div v-if="multiple" class="option" :class="{'active': !active}" @click="choice(option)">
+      <img alt="Vue logo" class="imagen" :src="getImgUrl(option.src)">
+      <br>
+      <span class="text">{{option.text}}</span>
+    </div>
+    <div v-else class="option" @click="choice(option)">
+      <img alt="Vue logo" class="imagen" :src="getImgUrl(option.src)">
+      <br>
+      <span class="text">{{option.text}}</span>
+    </div>
   </div>
 </template>
 
@@ -13,6 +20,14 @@ export default {
     option: {
       type: Object,
       required: true
+    },
+    active: {
+      type: Boolean,
+      required: false
+    },
+    multiple: {
+      type: Boolean,
+      required: false
     }
   },
   methods: {
@@ -36,12 +51,13 @@ export default {
   text-align: center;
   cursor: pointer;
   .imagen{
-    width: 100%;
+    max-width: 100%;
   }
   .text{
     margin-top: 10px;
     font-weight: bold;
   }
+  &.active, 
   &:hover{
     transform: translateY(-15px);
     border: 1px solid #00cccc69;

@@ -8,6 +8,7 @@
     <div class="action">
       <router-link tag="button" class="button" to="/sitio-web">Sitio web</router-link>
       <router-link tag="button" class="button" to="/diseño">Diseño gráfico</router-link>
+      <router-link tag="button" class="button" to="/marketing">Marketing digital</router-link>
     </div>
     
   </div>
