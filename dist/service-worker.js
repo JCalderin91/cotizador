@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cotizador/precache-manifest.a33b8d5607ee5a11afe738f762dceb53.js"
+  "/cotizador/precache-manifest.58a0cb3a6b5367fd65eb30ee736cc69a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "cotizador"});
