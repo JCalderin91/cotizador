@@ -1,24 +1,9 @@
-# vue-app-full
+# Cotizador
+Cotizador de precios de servicios para web de BoomIdeas.com
 
-## Project setup
-```
-yarn install
-```
+### Tecnologías
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- HTML
+- CSS
+- JavaScript
+- VueJs
